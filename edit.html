@@ -1,0 +1,18 @@
+<!doctype html><html lang="bn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAFIN TxT · সংশোধন</title>
+<style>body{background:#090515;color:#fff;font-family:system-ui;padding:20px}
+input,textarea{width:100%;padding:12px;margin:6px 0;background:#110a21;color:#fff;border:1px solid #7130a4;border-radius:10px}
+button{padding:12px 18px;background:linear-gradient(110deg,#791cff,#d51dff);color:#fff;border:none;border-radius:12px;font-weight:800;cursor:pointer}
+a{color:#e13cff}</style></head><body>
+<h2>RAFIN TxT · পণ্য সংশোধন</h2>
+<form method="post" enctype="multipart/form-data">
+<input name="name" value="{{item.name}}" required placeholder="পণ্যের নাম">
+<input name="price" value="{{item.price}}" required placeholder="দাম">
+<input name="category" value="{{item.category or ''}}" placeholder="ধরন">
+<textarea name="description" placeholder="বিবরণ">{{item.description or ''}}</textarea>
+<input type="file" name="photo" accept="image/*">
+<button type="submit">সংরক্ষণ করো</button>
+</form>
+<p><a href="{{ url_for('home') }}">← প্রশাসক প্যানেলে ফেরত যাও</a></p>
+</body></html>
